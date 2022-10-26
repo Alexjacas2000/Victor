@@ -1,0 +1,126 @@
+body{
+    background: linear-gradient(to right, rgb(255, 0, 0) 0%, rgb(0, 0, 255) 100%);
+    background-size: auto;
+    color: whitesmoke;
+    font-size: 10px;
+    margin-left: 1em;
+    font-family: 'VT323', monospace;
+}
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: scale(0.1) rotate(360deg) translate(100vw, 100vh);
+    animation: linear 2.5s titles-crazy forwards;
+  }
+  @keyframes titles-crazy{
+      0% {
+
+      }
+      100% {
+        transform: scale(1) rotate(0) translate(0);
+      }
+  }
+.titles h2{
+    font-size: 5em;
+    font-family: 'Dancing Script', cursive;
+}
+.titles h1{
+    font-size: 4em;
+    font-family: 'Bangers', cursive;
+}
+.portifolio-1, .portifolio-2{
+    display: inline;
+    justify-content: center;
+    height: 100vh;
+}
+@media (min-width: 500px){
+    .portifolio-1, .portifolio-2{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+.portifolio-1 h2, .portifolio-2 h2{
+    font-size: 4em;
+    font-family: 'Bangers', cursive;
+}
+.portifolio-1 img{
+    height: 300px;
+    width: auto;
+}
+.portifolio-2 img{
+    height:300px;
+    width: 180px;
+}
+.portifolio-1 .flip-card {
+    height: 300px;
+    width: 300px;
+    perspective: 1000px;
+}
+.portifolio-2 .flip-card {
+    height: 300px;
+    width: 170px;
+    perspective: 1000px;
+}
+.flip-card:active .card{
+    transform: rotateY(180deg);
+}
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2.5s;
+}
+.front-card, .back-card{
+    backface-visibility: hidden;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.back-card {
+    height: 300px;
+    width: auto;
+    transform: rotateY(180deg);
+}
+.poema{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+}
+.poema h2{
+    font-size: 2.5em;
+    font-family: 'Bangers', cursive;
+}
+.poemas-block{
+    display: block;
+}
+.poema li{
+    list-style: none;
+}
+.poema a{
+    color: sandybrown;
+}
+.SEMPRE, .NUNCA{
+    font-family: 'Bangers', cursive;
+    font-size: 1.5em;
+}
+.poema .SEMPRE{
+    color: seagreen;
+}
+.poema .NUNCA{
+    color: darkred;
+}
+@media (min-width: 500px){
+    .poema .NUNCA{
+        color: crimson;
+    }
+}
